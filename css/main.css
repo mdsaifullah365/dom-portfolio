@@ -1,0 +1,14 @@
+/* Variables */
+:root {
+  /* Colors */
+  --primary: #2a2c39;
+  --dark: #252734;
+  --light: #858792;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
