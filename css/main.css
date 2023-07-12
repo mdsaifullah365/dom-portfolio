@@ -36,6 +36,26 @@ body {
   padding: 0 20px;
 }
 
+.section-header {
+  padding: 40px 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.section-header .title {
+  color: #fff;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.section-header .line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: var(--light-color);
+}
+
 .btn {
   border: 1px solid var(--secondary-color);
   border-radius: 5px;
@@ -57,6 +77,10 @@ body {
 .btn-solid {
   color: var(--dark-color);
   background-color: var(--secondary-color);
+}
+
+.highlight {
+  color: #fff;
 }
 
 /* Sidebar */
@@ -205,4 +229,59 @@ body {
 }
 .hero .image img {
   width: 80%;
+}
+
+/* About */
+.about .description {
+  color: var(--light-color);
+  max-width: 768px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+  border-left: 1px solid var(--light-color);
+  padding-left: 40px;
+  text-align: justify;
+}
+
+.tech-stack {
+  background-color: var(--dark-color);
+  border-radius: 5px;
+  padding: 0 40px;
+}
+
+.tech-container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 1rem;
+  row-gap: 2rem;
+  padding: 40px 0;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.expertise-level {
+  color: var(--light-color);
+  border-right: 1px solid var(--light-color);
+}
+
+.tech-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
+.tech-logo {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.tech-name {
+  color: #fff;
 }
