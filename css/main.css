@@ -252,7 +252,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 5fr;
   gap: 1rem;
-  row-gap: 3rem;
+  row-gap: 2rem;
   padding: 40px 0;
   max-width: 768px;
   margin: 0 auto;
