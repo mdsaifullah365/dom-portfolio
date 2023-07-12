@@ -241,3 +241,47 @@ body {
   padding-left: 40px;
   text-align: justify;
 }
+
+.tech-stack {
+  background-color: var(--dark-color);
+  border-radius: 5px;
+  padding: 0 40px;
+}
+
+.tech-container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 1rem;
+  row-gap: 3rem;
+  padding: 40px 0;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.expertise-level {
+  color: var(--light-color);
+  border-right: 1px solid var(--light-color);
+}
+
+.tech-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
+.tech-logo {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.tech-name {
+  color: #fff;
+}
