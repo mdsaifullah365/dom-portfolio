@@ -1,3 +1,4 @@
+import about from './about.js';
 import hero from './hero.js';
 import sidebar from './sidebar.js';
 
@@ -9,3 +10,4 @@ main.setAttribute('id', 'home');
 body.append(sidebar);
 body.append(main);
 main.append(hero);
+main.append(about);

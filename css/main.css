@@ -36,6 +36,26 @@ body {
   padding: 0 20px;
 }
 
+.section-header {
+  padding: 40px 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.section-header .title {
+  color: #fff;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.section-header .line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: var(--light-color);
+}
+
 .btn {
   border: 1px solid var(--secondary-color);
   border-radius: 5px;
@@ -57,6 +77,10 @@ body {
 .btn-solid {
   color: var(--dark-color);
   background-color: var(--secondary-color);
+}
+
+.highlight {
+  color: #fff;
 }
 
 /* Sidebar */
@@ -205,4 +229,15 @@ body {
 }
 .hero .image img {
   width: 80%;
+}
+
+/* About */
+.about .description {
+  color: var(--light-color);
+  max-width: 768px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+  border-left: 1px solid var(--light-color);
+  padding-left: 40px;
+  text-align: justify;
 }
