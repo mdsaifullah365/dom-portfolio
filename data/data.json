@@ -1,0 +1,53 @@
+[
+  {
+    "id": "101",
+    "title": "Developer Portfolio",
+    "type": "Client-Side Project",
+    "images": [
+      {
+        "alt": "Developer Portfolio Thumbnail",
+        "src": "./img/projects/thumbnail-1.png"
+      }
+    ],
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, eaque! Provident tempore vitae necessitatibus laboriosam accusamus numquam assumenda officiis quia magni sunt aliquid culpa fugit excepturi, expedita laborum molestiae cumque! Quaerat nemo facere, pariatur delectus ipsum sunt quibusdam beatae laudantium et animi cupiditate doloremque iure hic cumque obcaecati fugit eveniet deleniti quas qui dolor necessitatibus accusamus eaque omnis reiciendis. Voluptates explicabo ducimus aspernatur a, possimus sequi ut perferendis tempora delectus reprehenderit dolores molestiae unde deserunt doloremque!",
+    "live": "https://mdsaifullah365.netlify.app",
+    "code": "https://github.com/mdsaifullah365/dom-portfolio",
+    "features": [null],
+    "technologies": [null],
+    "challenges": [null]
+  },
+  {
+    "id": "102",
+    "title": "Delibhai- A delivery service provider",
+    "type": "Full-Stack Project",
+    "images": [
+      {
+        "alt": "Delibhai Thumbnail",
+        "src": "./img/projects/thumbnail-2.png"
+      }
+    ],
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, eaque! Provident tempore vitae necessitatibus laboriosam accusamus numquam assumenda officiis quia magni sunt aliquid culpa fugit excepturi, expedita laborum molestiae cumque! Quaerat nemo facere, pariatur delectus ipsum sunt quibusdam beatae laudantium et animi cupiditate doloremque iure hic cumque obcaecati fugit eveniet deleniti quas qui dolor necessitatibus accusamus eaque omnis reiciendis. Voluptates explicabo ducimus aspernatur a, possimus sequi ut perferendis tempora delectus reprehenderit dolores molestiae unde deserunt doloremque!",
+    "live": "https://mdsaifullah365.netlify.app",
+    "code": "https://github.com/mdsaifullah365/dom-portfolio",
+    "features": [null],
+    "technologies": [null],
+    "challenges": [null]
+  },
+  {
+    "id": "103",
+    "title": "iScreen- An OTT Platform",
+    "type": "Client-Side Project",
+    "images": [
+      {
+        "alt": "iScreen Thumbnail",
+        "src": "./img/projects/thumbnail-3.png"
+      }
+    ],
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, eaque! Provident tempore vitae necessitatibus laboriosam accusamus numquam assumenda officiis quia magni sunt aliquid culpa fugit excepturi, expedita laborum molestiae cumque! Quaerat nemo facere, pariatur delectus ipsum sunt quibusdam beatae laudantium et animi cupiditate doloremque iure hic cumque obcaecati fugit eveniet deleniti quas qui dolor necessitatibus accusamus eaque omnis reiciendis. Voluptates explicabo ducimus aspernatur a, possimus sequi ut perferendis tempora delectus reprehenderit dolores molestiae unde deserunt doloremque!",
+    "live": "https://mdsaifullah365.netlify.app",
+    "code": "https://github.com/mdsaifullah365/dom-portfolio",
+    "features": [null],
+    "technologies": [null],
+    "challenges": [null]
+  }
+]

@@ -28,9 +28,10 @@ const createDiv = (className = '') => {
   return div;
 };
 
-const createSection = (className = '') => {
+const createSection = (sectionName = '') => {
   const section = document.createElement('section');
-  section.classList = className;
+  section.classList = sectionName;
+  section.id = sectionName;
 
   return section;
 };
@@ -51,6 +52,23 @@ const createP = (className = '') => {
   return p;
 };
 
+const createButton = (className = '') => {
+  const button = document.createElement('button');
+  button.classList = className;
+
+  return button;
+};
+
+const createA = (className = '', href = '#', target_blank = false) => {
+  const a = document.createElement('a');
+  a.classList = className;
+  a.setAttribute('href', href);
+
+  if (target_blank) a.setAttribute('target', '_blank');
+
+  return a;
+};
+
 export {
   createSectionTitle,
   createContainer,
@@ -58,4 +76,6 @@ export {
   createSection,
   createImg,
   createP,
+  createButton,
+  createA,
 };
