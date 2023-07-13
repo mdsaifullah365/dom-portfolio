@@ -285,3 +285,89 @@ body {
 .tech-name {
   color: #fff;
 }
+
+/* Projects */
+.projects .project-container {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 30px 0;
+  display: grid;
+  gap: 3rem;
+}
+
+.projects .project {
+  background-color: var(--dark-color);
+  padding: 40px;
+  display: grid;
+  align-items: center;
+  gap: 2rem;
+}
+
+.projects .project:hover {
+  cursor: pointer;
+  filter: brightness(95%);
+}
+
+.projects .project-thumbnail {
+  position: relative;
+}
+
+.projects .project-thumbnail .mockup {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.projects .project-thumbnail .img {
+  position: absolute;
+  top: 3%;
+  left: 12.6316%;
+  width: 74.9%;
+  aspect-ratio: 1137/720;
+}
+
+.projects .project-info {
+  color: var(--light-color);
+}
+
+.projects .project-title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.projects .project:hover .project-title {
+  text-decoration: underline;
+}
+
+.projects .project-type {
+  font-size: 10px;
+  margin-bottom: 12px;
+}
+
+.projects .project-description {
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.projects .link-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.projects .link-container .link {
+  color: #fff;
+  font-size: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.projects .link-container .link span {
+  font-size: 12px;
+}
+
+.projects .link-container .link:hover span {
+  text-decoration: underline;
+}
