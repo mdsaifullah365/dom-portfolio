@@ -69,6 +69,31 @@ const createA = (className = '', href = '#', target_blank = false) => {
   return a;
 };
 
+const createInput = (
+  id = '',
+  name = '',
+  type = '',
+  value = '',
+  required = false
+) => {
+  const input = document.createElement('input');
+  input.id = id;
+  input.setAttribute('name', name);
+  input.setAttribute('type', type);
+  input.setAttribute('value', value);
+  if (required) input.setAttribute('required', required);
+
+  return input;
+};
+
+const createLabel = (forValue = '', message) => {
+  const label = document.createElement('label');
+  label.setAttribute('for', forValue);
+  label.innerText = message;
+
+  return label;
+};
+
 export {
   createSectionTitle,
   createContainer,
@@ -78,4 +103,6 @@ export {
   createP,
   createButton,
   createA,
+  createInput,
+  createLabel,
 };

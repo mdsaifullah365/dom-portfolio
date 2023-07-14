@@ -20,27 +20,15 @@ description.classList.add('description');
 description.innerText =
   'I am a frontend web developer. I can provide clean code and pixel perfect design to make interactive with web animations.';
 
-const contactLink = document.createElement('a');
-contactLink.setAttribute('href', '#contact');
+const contactBtn = document.createElement('button');
+contactBtn.classList = 'btn btn-light btn-contact';
+contactBtn.innerText = 'Contact me';
 
-const btnLight = document.createElement('button');
-btnLight.classList.add('btn');
-btnLight.classList.add('btn-light');
-btnLight.innerText = 'Contact me';
+const resumeBtn = document.createElement('button');
+resumeBtn.classList = 'btn btn-solid';
+resumeBtn.innerText = 'Download resume';
 
-contactLink.append(btnLight);
-
-const resumeLink = document.createElement('a');
-resumeLink.setAttribute('href', '#');
-
-const btnSolid = document.createElement('button');
-btnSolid.classList.add('btn');
-btnSolid.classList.add('btn-solid');
-btnSolid.innerText = 'Download resume';
-
-resumeLink.append(btnSolid);
-
-info.append(greetings, name, description, contactLink, resumeLink);
+info.append(greetings, name, description, contactBtn, resumeBtn);
 
 const imageWrapper = document.createElement('div');
 imageWrapper.classList.add('image');
