@@ -28,9 +28,10 @@ const createDiv = (className = '') => {
   return div;
 };
 
-const createSection = (className = '') => {
+const createSection = (sectionName = '') => {
   const section = document.createElement('section');
-  section.classList = className;
+  section.classList = sectionName;
+  section.id = sectionName;
 
   return section;
 };
@@ -51,6 +52,48 @@ const createP = (className = '') => {
   return p;
 };
 
+const createButton = (className = '') => {
+  const button = document.createElement('button');
+  button.classList = className;
+
+  return button;
+};
+
+const createA = (className = '', href = '#', target_blank = false) => {
+  const a = document.createElement('a');
+  a.classList = className;
+  a.setAttribute('href', href);
+
+  if (target_blank) a.setAttribute('target', '_blank');
+
+  return a;
+};
+
+const createInput = (
+  id = '',
+  name = '',
+  type = '',
+  value = '',
+  required = false
+) => {
+  const input = document.createElement('input');
+  input.id = id;
+  input.setAttribute('name', name);
+  input.setAttribute('type', type);
+  input.setAttribute('value', value);
+  if (required) input.setAttribute('required', required);
+
+  return input;
+};
+
+const createLabel = (forValue = '', message) => {
+  const label = document.createElement('label');
+  label.setAttribute('for', forValue);
+  label.innerText = message;
+
+  return label;
+};
+
 export {
   createSectionTitle,
   createContainer,
@@ -58,4 +101,8 @@ export {
   createSection,
   createImg,
   createP,
+  createButton,
+  createA,
+  createInput,
+  createLabel,
 };

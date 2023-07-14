@@ -1,5 +1,7 @@
 import about from './about.js';
+import contact from './contact.js';
 import hero from './hero.js';
+import projects from './projects.js';
 import sidebar from './sidebar.js';
 import techStack from './tech.js';
 
@@ -13,3 +15,19 @@ body.append(main);
 main.append(hero);
 main.append(about);
 main.append(techStack);
+main.append(projects);
+
+// Event Listeners
+document.querySelectorAll('.btn-contact').forEach((button) => {
+  button.addEventListener('click', showContact);
+});
+
+// Event Handlers
+function showContact() {
+  body.appendChild(contact);
+  document.getElementById('cancel').addEventListener('click', removeContact);
+}
+
+function removeContact() {
+  contact.remove();
+}
