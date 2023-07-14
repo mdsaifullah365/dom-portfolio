@@ -371,3 +371,95 @@ body {
 .projects .link-container .link:hover span {
   text-decoration: underline;
 }
+
+/* Contact */
+.contact {
+  max-height: 600px;
+  max-width: 900px;
+  margin: auto auto;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background-color: var(--dark-color);
+  box-shadow: 2px 3px 5px #999;
+  opacity: 0.98;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contact #cancel {
+  position: absolute;
+  top: 50px;
+  right: 40px;
+  color: #fff;
+  padding: 30px;
+}
+
+.contact #cancel:hover {
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.contact .contact-info {
+  padding: 60px;
+  background-color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+}
+
+.contact .contact-info .contact-details {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.contact .contact-info .contact-details a {
+  color: var(--dark-color);
+}
+
+.contact .contact-info .contact-details a:hover span {
+  text-decoration: underline;
+}
+
+.contact .contact-info .contact-details a i {
+  margin-right: 1rem;
+}
+
+.contact .contact-message {
+  padding: 60px;
+}
+
+.contact .contact-message .heading {
+  color: #fff;
+  font-size: 40px;
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+
+.contact .contact-message .contact-form {
+  width: 100%;
+}
+
+.contact .contact-message .contact-form label {
+  color: var(--light-color);
+}
+
+.contact .contact-message .contact-form #name,
+.contact .contact-message .contact-form #email,
+.contact .contact-message .contact-form #message {
+  width: 100%;
+  height: 40px;
+  outline: none;
+  background-color: transparent;
+  color: var(--light-color);
+  border: none;
+  border-bottom: 1px solid var(--light-color);
+  margin-bottom: 40px;
+}
+
+.contact .contact-message .contact-form #message {
+  height: 80px;
+  margin-top: 15px;
+}
