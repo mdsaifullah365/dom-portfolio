@@ -1,4 +1,10 @@
-import { createA, createDiv, createInput, createLabel } from './utilities.js';
+import {
+  createA,
+  createButton,
+  createDiv,
+  createInput,
+  createLabel,
+} from './utilities.js';
 
 const contactLinks = [
   {
@@ -29,9 +35,8 @@ const contactLinks = [
 
 const contact = createDiv('contact');
 
-const cancelBtn = document.createElement('i');
-cancelBtn.classList = 'fa-solid fa-xmark fa-2xl';
-cancelBtn.id = 'cancel';
+const cancelBtn = createButton('btn-cancel');
+cancelBtn.innerHTML = '<i class="fa-solid fa-xmark fa-2xl"></i>';
 
 const contactInfo = createDiv('contact-info');
 
@@ -59,25 +64,23 @@ heading.innerText = "Let's talk";
 const form = document.createElement('form');
 form.classList = 'contact-form';
 
-const labelName = createLabel('name', 'Name');
-const name = createInput('name', 'name', 'text', '', true); // id , name, type, value, required
+const labelName = createLabel('name', 'Name'); // for, innerText
+const name = createInput('name', 'name', 'text', '', true); // id , name, type, value,  required
 
-const labelEmail = createLabel('email', 'E-mail');
-const email = createInput('email', 'email', 'email', '', true); // id , name, type, value,required
+const labelEmail = createLabel('email', 'E-mail'); // for, innerText
+const email = createInput('email', 'email', 'email', '', true); // id , name, type, value, required
 
-const labelMessage = createLabel('message', 'Message');
+const labelMessage = createLabel('message', 'Message'); // for, innerText
 const message = document.createElement('textarea');
 message.id = 'message';
 message.setAttribute('required', true);
 
-const submit = createInput('submit', 'submit', 'submit', 'Send message');
+const submit = createInput('submit', 'submit', 'submit', 'Send message'); // id , name, type, value
 submit.classList = 'btn btn-solid';
 
 contactInfo.append(contactDetails);
-
 form.append(labelName, name, labelEmail, email, labelMessage, message, submit);
-
-contactMessage.append(cancelBtn, heading, form);
-contact.append(contactInfo, contactMessage);
+contactMessage.append(heading, form);
+contact.append(cancelBtn, contactInfo, contactMessage);
 
 export default contact;

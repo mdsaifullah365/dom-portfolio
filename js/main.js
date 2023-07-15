@@ -25,7 +25,7 @@ document.querySelectorAll('.btn-contact').forEach((button) => {
 // Event Handlers
 function showContact() {
   body.appendChild(contact);
-  document.getElementById('cancel').addEventListener('click', removeContact);
+  contact.querySelector('.btn-cancel').addEventListener('click', removeContact);
 }
 
 function removeContact() {

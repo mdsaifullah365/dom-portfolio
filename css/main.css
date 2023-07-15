@@ -388,23 +388,26 @@ body {
   right: 0;
   z-index: 50;
   background-color: var(--dark-color);
-  box-shadow: 2px 3px 5px #999;
   opacity: 0.98;
+  box-shadow: 2px 3px 5px #999;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-.contact #cancel {
+.contact .btn-cancel {
   position: absolute;
-  top: 50px;
-  right: 40px;
+  top: 30px;
+  right: 20px;
   color: #fff;
+  background-color: transparent;
+  font-size: 20px;
+  border: none;
   padding: 30px;
 }
 
-.contact #cancel:hover {
-  color: var(--secondary-color);
+.contact .btn-cancel:hover {
   cursor: pointer;
+  color: var(--secondary-color);
 }
 
 .contact .contact-info {
@@ -455,9 +458,9 @@ body {
 .contact .contact-message .contact-form #message {
   width: 100%;
   height: 40px;
-  outline: none;
-  background-color: transparent;
   color: var(--light-color);
+  background-color: transparent;
+  outline: none;
   border: none;
   border-bottom: 1px solid var(--light-color);
   margin-bottom: 40px;
