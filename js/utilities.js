@@ -1,3 +1,12 @@
+const createSection = (sectionName = '') => {
+  const section = document.createElement('section');
+  section.classList.add(sectionName);
+  section.classList.add('section');
+  section.id = sectionName;
+
+  return section;
+};
+
 const createSectionTitle = (title) => {
   const sectionHeader = document.createElement('header');
   sectionHeader.classList.add('section-header');
@@ -28,12 +37,11 @@ const createDiv = (className = '') => {
   return div;
 };
 
-const createSection = (sectionName = '') => {
-  const section = document.createElement('section');
-  section.classList = sectionName;
-  section.id = sectionName;
+const createP = (className = '') => {
+  const p = document.createElement('p');
+  p.classList = className;
 
-  return section;
+  return p;
 };
 
 const createImg = (className = '', src = '', alt = '') => {
@@ -43,13 +51,6 @@ const createImg = (className = '', src = '', alt = '') => {
   img.setAttribute('alt', alt);
 
   return img;
-};
-
-const createP = (className = '') => {
-  const p = document.createElement('p');
-  p.classList = className;
-
-  return p;
 };
 
 const createButton = (className = '') => {

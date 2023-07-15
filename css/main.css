@@ -36,8 +36,12 @@ body {
   padding: 0 20px;
 }
 
+.section {
+  padding: 50px 0;
+}
+
 .section-header {
-  padding: 40px 0 20px;
+  padding-bottom: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,12 +51,12 @@ body {
 .section-header .title {
   color: #fff;
   font-size: 30px;
-  text-transform: uppercase;
+  font-weight: lighter;
 }
 
 .section-header .line {
   flex-grow: 1;
-  height: 2px;
+  height: 1px;
   background-color: var(--light-color);
 }
 
@@ -94,84 +98,84 @@ body {
   overflow: hidden;
 }
 
-.logo {
+.sidebar .logo {
   width: 100%;
-  height: var(--sidebar-width);
+  aspect-ratio: 1/1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.logo img {
+.sidebar .logo img {
   width: 70%;
 }
 
-.navmenu {
+.sidebar .navmenu {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.navmenu li {
+.sidebar .navmenu li {
   position: relative;
   padding: 28px;
   border-bottom: 1px solid var(--light-color);
 }
 
-.navmenu li:last-child {
+.sidebar .navmenu li:last-child {
   border-bottom: none;
 }
 
-.navmenu li:hover {
+.sidebar .navmenu li:hover {
   cursor: pointer;
 }
 
-.navmenu li a {
+.sidebar .navmenu li a {
   color: #fff;
-  width: 100$;
 }
 
-.navmenu li i {
+.sidebar .navmenu li i {
   position: absolute;
   top: 50%;
   left: 50%;
-  font-size: 16px;
   transform: translate(-50%, -50%);
+  font-size: 16px;
   transition: transform 0.5s ease-out;
 }
 
-.navmenu li:hover i {
+.sidebar .navmenu li:hover i {
   transform: translate(120px, -50%);
 }
 
-.navmenu li span {
+.sidebar .navmenu li span {
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-120px, -50%);
+  color: #fff;
   font-size: 12px;
   padding: 20px;
-  color: #fff;
-  transform: translate(-120px, -50%);
   transition: transform 0.2s ease-out, color 0.2s ease-out 0.3s;
 }
-.navmenu li:hover span {
+
+.sidebar .navmenu li:hover span {
   color: var(--secondary-color);
   transform: translate(-50%, -50%);
 }
 
-.resume {
+.sidebar .resume {
   position: absolute;
   left: 50%;
   bottom: 10px;
-  padding: 10px;
+  transform: translateX(-50%);
   font-size: 28px;
   color: #fff;
-  transform: translateX(-50%);
+  padding: 10px;
   transition: transform 0.2s ease-in;
 }
 
-.resume:hover {
+.sidebar .resume:hover {
   color: var(--secondary-color);
   transform: translateX(-50%) scale(1.2);
 }
@@ -184,105 +188,105 @@ body {
 /* Hero */
 
 .hero {
-  max-height: 900px;
   background-color: var(--dark-color);
+  padding: 0;
 }
 
 .hero .container {
-  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.hero .info,
-.hero .image {
-  flex-grow: 1;
+.hero .hero-info,
+.hero .hero-img-container {
   width: 50%;
+  flex-grow: 1;
 }
 
-.hero .greetings {
-  font-size: 14px;
+.hero .hero-info .greetings {
   color: var(--secondary-color);
+  font-size: 14px;
 }
 
-.hero .name {
-  font-size: 50px;
+.hero .hero-info .name {
   color: #fff;
+  font-size: 50px;
   margin-bottom: 5px;
 }
 
-.hero .description {
-  font-size: 16px;
+.hero .hero-info .description {
   color: var(--light-color);
+  font-size: 16px;
   margin-bottom: 24px;
 }
 
-.hero .btn-light {
+.hero .hero-info .btn-contact {
   margin-right: 15px;
 }
 
-.hero .image {
+.hero .hero-img-container {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
 }
-.hero .image img {
+
+.hero .hero-img-container.img {
   width: 80%;
 }
 
 /* About */
 .about .description {
-  color: var(--light-color);
   max-width: 768px;
   margin: 0 auto 40px;
-  line-height: 1.6;
-  border-left: 1px solid var(--light-color);
   padding-left: 40px;
+  border-left: 1px solid var(--light-color);
+  color: var(--light-color);
+  line-height: 1.6;
   text-align: justify;
 }
 
-.tech-stack {
+/* Tech */
+.tech {
   background-color: var(--dark-color);
   border-radius: 5px;
-  padding: 0 40px;
 }
 
-.tech-container {
+.tech .tech-container {
+  max-width: 768px;
+  padding: 40px 0;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 5fr;
-  gap: 1rem;
+  column-gap: 1rem;
   row-gap: 2rem;
-  padding: 40px 0;
-  max-width: 768px;
-  margin: 0 auto;
 }
 
-.expertise-level {
+.tech .tech-container .expertise-level {
   color: var(--light-color);
   border-right: 1px solid var(--light-color);
 }
 
-.tech-items {
+.tech .tech-container .tech-items {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
 }
 
-.item {
-  display: flex;
-  align-items: center;
+.tech .tech-container .tech-items .item {
   background-color: var(--primary-color);
   padding: 5px 8px;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
 }
 
-.tech-logo {
+.tech .tech-container .tech-items .tech-logo {
   width: 20px;
   margin-right: 10px;
 }
 
-.tech-name {
+.tech .tech-container .tech-items .tech-name {
   color: #fff;
 }
 
@@ -312,13 +316,13 @@ body {
   position: relative;
 }
 
-.projects .project-thumbnail .mockup {
+.projects .project-thumbnail .project-mockup {
   width: 100%;
   position: relative;
   z-index: 2;
 }
 
-.projects .project-thumbnail .img {
+.projects .project-thumbnail .project-img {
   position: absolute;
   top: 3%;
   left: 12.6316%;
@@ -384,23 +388,26 @@ body {
   right: 0;
   z-index: 50;
   background-color: var(--dark-color);
-  box-shadow: 2px 3px 5px #999;
   opacity: 0.98;
+  box-shadow: 2px 3px 5px #999;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-.contact #cancel {
+.contact .btn-cancel {
   position: absolute;
-  top: 50px;
-  right: 40px;
+  top: 30px;
+  right: 20px;
   color: #fff;
+  background-color: transparent;
+  font-size: 20px;
+  border: none;
   padding: 30px;
 }
 
-.contact #cancel:hover {
-  color: var(--secondary-color);
+.contact .btn-cancel:hover {
   cursor: pointer;
+  color: var(--secondary-color);
 }
 
 .contact .contact-info {
@@ -451,9 +458,9 @@ body {
 .contact .contact-message .contact-form #message {
   width: 100%;
   height: 40px;
-  outline: none;
-  background-color: transparent;
   color: var(--light-color);
+  background-color: transparent;
+  outline: none;
   border: none;
   border-bottom: 1px solid var(--light-color);
   margin-bottom: 40px;
