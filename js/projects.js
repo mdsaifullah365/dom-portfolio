@@ -17,7 +17,7 @@ const title = createSectionTitle('Featured Projects');
 const projectContainer = createDiv('project-container');
 
 // Fetch Project Data
-fetch('/data/data.json')
+fetch('/data/projects.json')
   .then((res) => res.json())
   .then((projects) => {
     projects.forEach(
@@ -27,7 +27,7 @@ fetch('/data/data.json')
           title: projectTitle,
           type: projectType,
           images,
-          description,
+          description: projectDescription,
           live,
           code,
         },
@@ -40,12 +40,12 @@ fetch('/data/data.json')
         const thumbnail = createDiv('project-thumbnail');
 
         const mockup = createImg(
-          'mockup',
+          'project-mockup',
           './img/mockup.png',
           'Thumbnail Mockup'
         );
 
-        const img = createImg('img', images[0].src, images[0].alt);
+        const img = createImg('project-img', images[0].src, images[0].alt);
 
         const info = createDiv('project-info');
 
@@ -56,12 +56,12 @@ fetch('/data/data.json')
         const type = createP('project-type');
         type.innerText = projectType;
 
-        const desc = createP('project-description');
-        let slicedDescription = description.slice(0, 180);
+        const description = createP('project-description');
+        let slicedDescription = projectDescription.slice(0, 180); // slice 180 characters
         slicedDescription =
           slicedDescription.slice(0, slicedDescription.lastIndexOf(' ')) +
-          ' . . .';
-        desc.innerText = slicedDescription;
+          ' . . .'; // remove last incomplete word and add dots
+        description.innerText = slicedDescription;
 
         const linkContainer = createDiv('link-container');
 
@@ -81,7 +81,8 @@ fetch('/data/data.json')
 
         linkContainer.append(liveLink, codeLink);
 
-        info.append(title, type, desc, linkContainer);
+        info.append(title, type, description, linkContainer);
+
         if (index % 2 === 0) {
           project.append(thumbnail, info);
           project.style.gridTemplateColumns = '6fr 5fr';
@@ -93,6 +94,7 @@ fetch('/data/data.json')
         detailsLink.append(project);
         projectContainer.append(detailsLink);
 
+        // Add Event Listener
         detailsLink.addEventListener('click', function (event) {
           event.preventDefault();
         });

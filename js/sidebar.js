@@ -1,29 +1,4 @@
-// Create sidebar
-const sidebar = document.createElement('aside');
-sidebar.classList.add('sidebar');
-
-// Create Logo wrapper
-const logoWrapper = document.createElement('a');
-logoWrapper.classList.add('logo');
-logoWrapper.setAttribute('href', '#home');
-
-// Create logo
-const logo = document.createElement('img');
-logo.setAttribute('src', './img/logo.png');
-logo.setAttribute('alt', 'Logo');
-
-// Append logo to the logo Wrapper
-logoWrapper.append(logo);
-
-// Append logo wrapper to the sidebar
-sidebar.append(logoWrapper);
-
-// Create navmenu
-const navmenu = document.createElement('nav');
-navmenu.classList.add('navmenu');
-
-// Create ul
-const ul = document.createElement('ul');
+import { createA, createImg } from './utilities.js';
 
 const navItems = [
   { link: '#home', text: 'Home', icon: 'fa-sharp fa-solid fa-house' },
@@ -32,40 +7,42 @@ const navItems = [
   { link: '#contact', text: 'Contact', icon: 'fa-solid fa-address-book' },
 ];
 
-navItems.forEach(({ link, text, icon }) => {
-  // Create li(s)
-  const li = document.createElement('li');
-  const a = document.createElement('a');
-  const i = document.createElement('i');
-  const span = document.createElement('span');
+const sidebar = document.createElement('aside');
+sidebar.classList.add('sidebar');
 
+const logoLink = createA('logo', '#home');
+
+const logo = createImg('img', './img/logo.png', 'Logo');
+
+const navmenu = document.createElement('nav');
+navmenu.classList.add('navmenu');
+
+const ul = document.createElement('ul');
+
+navItems.forEach(({ link, text, icon }) => {
+  const li = document.createElement('li');
+
+  const a = createA('', link);
+
+  const i = document.createElement('i');
   i.className = icon;
+
+  const span = document.createElement('span');
   span.innerText = text;
-  a.setAttribute('href', link);
 
   a.append(i, span);
   li.append(a);
-  ul.append(li); // Append li(s) to the ul
+  ul.append(li);
 });
 
-// Append ul to the navmenu
-navmenu.append(ul);
-// Append navmenu to the sidebar
-sidebar.append(navmenu);
+const resumeLink = createA('resume', '#');
 
-// Create resume link
-const resumeLink = document.createElement('a');
-resumeLink.classList.add('resume');
-resumeLink.setAttribute('href', '#');
-
-// Create resume icon
 const resumeIcon = document.createElement('i');
 resumeIcon.className = 'fa-solid fa-file-arrow-down';
 
-// Append resume icon to the resume link
+logoLink.append(logo);
+navmenu.append(ul);
 resumeLink.append(resumeIcon);
-
-// Append resume link to the sidebar
-sidebar.append(resumeLink);
+sidebar.append(logoLink, navmenu, resumeLink);
 
 export default sidebar;

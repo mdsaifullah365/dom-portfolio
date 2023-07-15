@@ -66,7 +66,7 @@ const techs = [
   },
 ];
 
-const tech = createSection('tech-stack');
+const tech = createSection('tech');
 
 const title = createSectionTitle('Tech Stack');
 
@@ -75,8 +75,8 @@ const container = createContainer();
 const techContainer = createDiv('tech-container');
 
 techs.forEach(({ expertiseLevel: level, items }) => {
-  const expertiseLevel = createDiv('expertise-level');
-  expertiseLevel.innerHTML = level;
+  const expertiseLevel = createP('expertise-level');
+  expertiseLevel.innerText = level;
 
   const techItems = createDiv('tech-items');
 

@@ -1,45 +1,43 @@
-const hero = document.createElement('section');
-hero.classList = 'hero section';
+import {
+  createButton,
+  createContainer,
+  createDiv,
+  createImg,
+  createP,
+  createSection,
+} from './utilities.js';
 
-const container = document.createElement('div');
-container.classList.add('container');
+const hero = createSection('hero');
 
-const info = document.createElement('div');
-info.classList.add('info');
+const container = createContainer();
 
-const greetings = document.createElement('p');
-greetings.classList.add('greetings');
+const info = createDiv('hero-info');
+
+const greetings = createP('greetings');
 greetings.innerText = 'Hi, there!';
 
 const name = document.createElement('h1');
 name.classList.add('name');
 name.innerText = 'I am Saif';
 
-const description = document.createElement('p');
-description.classList.add('description');
+const description = createP('description');
 description.innerText =
   'I am a frontend web developer. I can provide clean code and pixel perfect design to make interactive with web animations.';
 
-const contactBtn = document.createElement('button');
-contactBtn.classList = 'btn btn-light btn-contact';
+const contactBtn = createButton('btn btn-light btn-contact');
 contactBtn.innerText = 'Contact me';
 
-const resumeBtn = document.createElement('button');
-resumeBtn.classList = 'btn btn-solid';
+const resumeBtn = createButton('btn btn-solid btn-resume');
 resumeBtn.innerText = 'Download resume';
+
+const imgContainer = createDiv('hero-img-container');
+const img = createImg('img', './img/my-photo.png', 'Photo of Md Saif Ullah');
 
 info.append(greetings, name, description, contactBtn, resumeBtn);
 
-const imageWrapper = document.createElement('div');
-imageWrapper.classList.add('image');
+imgContainer.append(img);
 
-const img = document.createElement('img');
-img.setAttribute('src', './img/my-photo.png');
-img.setAttribute('alt', 'Photo of Md Saif Ullah');
-
-imageWrapper.append(img);
-
-container.append(info, imageWrapper);
+container.append(info, imgContainer);
 hero.append(container);
 
 export default hero;
