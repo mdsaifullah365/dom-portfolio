@@ -237,12 +237,12 @@ body {
 
 /* About */
 .about .description {
-  color: var(--light-color);
   max-width: 768px;
   margin: 0 auto 40px;
-  line-height: 1.6;
-  border-left: 1px solid var(--light-color);
   padding-left: 40px;
+  border-left: 1px solid var(--light-color);
+  color: var(--light-color);
+  line-height: 1.6;
   text-align: justify;
 }
 
