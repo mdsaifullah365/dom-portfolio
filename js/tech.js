@@ -61,7 +61,7 @@ const techs = [
     items: [
       { name: 'Git', icon: git },
       { name: 'GitHub', icon: github },
-      { name: 'Visual Studio Code', icon: vscode },
+      { name: 'VS Code', icon: vscode },
     ],
   },
 ];
