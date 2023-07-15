@@ -60,10 +60,10 @@ const form = document.createElement('form');
 form.classList = 'contact-form';
 
 const labelName = createLabel('name', 'Name');
-const name = createInput('name', 'name', 'text', '', true);
+const name = createInput('name', 'name', 'text', '', true); // id , name, type, value, required
 
 const labelEmail = createLabel('email', 'E-mail');
-const email = createInput('email', 'email', 'email', '', true);
+const email = createInput('email', 'email', 'email', '', true); // id , name, type, value,required
 
 const labelMessage = createLabel('message', 'Message');
 const message = document.createElement('textarea');
