@@ -1,5 +1,5 @@
 const hero = document.createElement('section');
-hero.classList.add('hero');
+hero.classList = 'hero section';
 
 const container = document.createElement('div');
 container.classList.add('container');

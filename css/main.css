@@ -36,6 +36,10 @@ body {
   padding: 0 20px;
 }
 
+.section {
+  padding: 50px 0;
+}
+
 .section-header {
   padding: 50px 0 40px;
   display: flex;
@@ -245,7 +249,6 @@ body {
 .tech-stack {
   background-color: var(--dark-color);
   border-radius: 5px;
-  padding: 0 40px;
 }
 
 .tech-container {
