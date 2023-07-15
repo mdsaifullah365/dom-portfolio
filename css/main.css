@@ -63,9 +63,9 @@ body {
 
 .btn {
   border: 1px solid var(--secondary-color);
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
   transition: transform 0.1s ease-in-out;
 }
 
@@ -96,7 +96,6 @@ body {
   width: var(--sidebar-width);
   height: 100%;
   background-color: var(--dark-color);
-  overflow: hidden;
 }
 
 .sidebar .logo {
@@ -116,6 +115,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  overflow: hidden;
 }
 
 .sidebar .navmenu li {
@@ -179,6 +179,39 @@ body {
 .sidebar .resume:hover {
   color: var(--secondary-color);
   transform: translateX(-50%) scale(1.2);
+}
+
+.sidebar .resume .tooltip {
+  visibility: hidden;
+  width: 150px;
+  background-color: var(--dark-color);
+  filter: brightness(90%);
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  padding: 5px;
+  position: absolute;
+  top: 50%;
+  left: 160%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in 0.3s, visibility 0.3s ease-in 0.3;
+}
+
+.sidebar .resume:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.sidebar .resume .tooltip::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent var(--dark-color) transparent transparent;
 }
 
 /* Content */
