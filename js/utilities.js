@@ -30,7 +30,8 @@ const createDiv = (className = '') => {
 
 const createSection = (sectionName = '') => {
   const section = document.createElement('section');
-  section.classList = sectionName;
+  section.classList.add(sectionName);
+  section.classList.add('section');
   section.id = sectionName;
 
   return section;

@@ -36,8 +36,12 @@ body {
   padding: 0 20px;
 }
 
+.section {
+  padding: 50px 0;
+}
+
 .section-header {
-  padding: 40px 0 20px;
+  padding-bottom: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,12 +51,12 @@ body {
 .section-header .title {
   color: #fff;
   font-size: 30px;
-  text-transform: uppercase;
+  font-weight: lighter;
 }
 
 .section-header .line {
   flex-grow: 1;
-  height: 2px;
+  height: 1px;
   background-color: var(--light-color);
 }
 
@@ -245,7 +249,6 @@ body {
 .tech-stack {
   background-color: var(--dark-color);
   border-radius: 5px;
-  padding: 0 40px;
 }
 
 .tech-container {

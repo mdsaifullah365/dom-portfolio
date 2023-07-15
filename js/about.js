@@ -14,7 +14,7 @@ const about = createSection('about');
 
 const container = createContainer();
 
-const title = createSectionTitle('About me');
+const title = createSectionTitle('About Me');
 
 const description = createDiv('description');
 description.innerHTML = aboutMe
