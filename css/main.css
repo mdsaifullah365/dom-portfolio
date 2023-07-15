@@ -238,7 +238,7 @@ body {
 /* About */
 .about .description {
   max-width: 768px;
-  margin: 0 auto 40px;
+  margin: 0 auto;
   padding-left: 40px;
   border-left: 1px solid var(--light-color);
   color: var(--light-color);
@@ -254,7 +254,6 @@ body {
 
 .tech .tech-container {
   max-width: 768px;
-  padding: 40px 0;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 5fr;
@@ -294,7 +293,6 @@ body {
 .projects .project-container {
   max-width: 768px;
   margin: 0 auto;
-  padding: 30px 0;
   display: grid;
   gap: 3rem;
 }
