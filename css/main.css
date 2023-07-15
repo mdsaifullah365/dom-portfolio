@@ -2,8 +2,9 @@
 :root {
   /* Colors */
   --primary-color: #2a2c39;
-  --secondary-color: #a2ff86;
+  --secondary-color: #35bdd0;
   --dark-color: #252734;
+  --medium-color: #282a37;
   --light-color: #858792;
 
   /* Width */
@@ -248,7 +249,7 @@ body {
 
 /* Tech */
 .tech {
-  background-color: var(--dark-color);
+  background-color: var(--medium-color);
 }
 
 .tech .tech-container {
