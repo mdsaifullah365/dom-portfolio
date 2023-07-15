@@ -2,8 +2,9 @@
 :root {
   /* Colors */
   --primary-color: #2a2c39;
-  --secondary-color: #a2ff86;
+  --secondary-color: #35bdd0;
   --dark-color: #252734;
+  --medium-color: #282a37;
   --light-color: #858792;
 
   /* Width */
@@ -33,15 +34,15 @@ body {
 .container {
   max-width: 1024px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 50px;
 }
 
 .section {
-  padding: 50px 0;
+  padding: 80px 0;
 }
 
 .section-header {
-  padding-bottom: 40px;
+  padding-bottom: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,7 +51,7 @@ body {
 
 .section-header .title {
   color: #fff;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: lighter;
 }
 
@@ -62,9 +63,9 @@ body {
 
 .btn {
   border: 1px solid var(--secondary-color);
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
   transition: transform 0.1s ease-in-out;
 }
 
@@ -95,7 +96,6 @@ body {
   width: var(--sidebar-width);
   height: 100%;
   background-color: var(--dark-color);
-  overflow: hidden;
 }
 
 .sidebar .logo {
@@ -107,7 +107,7 @@ body {
 }
 
 .sidebar .logo img {
-  width: 70%;
+  width: 60%;
 }
 
 .sidebar .navmenu {
@@ -115,6 +115,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  overflow: hidden;
 }
 
 .sidebar .navmenu li {
@@ -178,6 +179,39 @@ body {
 .sidebar .resume:hover {
   color: var(--secondary-color);
   transform: translateX(-50%) scale(1.2);
+}
+
+.sidebar .resume .tooltip {
+  visibility: hidden;
+  width: 150px;
+  background-color: var(--dark-color);
+  filter: brightness(90%);
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  padding: 5px;
+  position: absolute;
+  top: 50%;
+  left: 160%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in 0.3s, visibility 0.3s ease-in 0.3;
+}
+
+.sidebar .resume:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.sidebar .resume .tooltip::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent var(--dark-color) transparent transparent;
 }
 
 /* Content */
@@ -248,8 +282,7 @@ body {
 
 /* Tech */
 .tech {
-  background-color: var(--dark-color);
-  border-radius: 5px;
+  background-color: var(--medium-color);
 }
 
 .tech .tech-container {
@@ -298,7 +331,7 @@ body {
 }
 
 .projects .project {
-  background-color: var(--dark-color);
+  background-color: var(--medium-color);
   padding: 40px;
   display: grid;
   align-items: center;
@@ -307,7 +340,7 @@ body {
 
 .projects .project:hover {
   cursor: pointer;
-  filter: brightness(95%);
+  background-color: var(--dark-color);
 }
 
 .projects .project-thumbnail {

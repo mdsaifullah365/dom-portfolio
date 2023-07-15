@@ -40,9 +40,13 @@ const resumeLink = createA('resume', '#');
 const resumeIcon = document.createElement('i');
 resumeIcon.className = 'fa-solid fa-file-arrow-down';
 
+const tooltip = document.createElement('span');
+tooltip.classList = 'tooltip';
+tooltip.innerText = 'Download resume';
+
 logoLink.append(logo);
 navmenu.append(ul);
-resumeLink.append(resumeIcon);
+resumeLink.append(resumeIcon, tooltip);
 sidebar.append(logoLink, navmenu, resumeLink);
 
 export default sidebar;
