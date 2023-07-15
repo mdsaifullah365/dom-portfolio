@@ -188,50 +188,50 @@ body {
 /* Hero */
 
 .hero {
-  max-height: 900px;
   background-color: var(--dark-color);
+  padding: 0;
 }
 
 .hero .container {
-  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.hero .info,
-.hero .image {
-  flex-grow: 1;
+.hero .hero-info,
+.hero .hero-img-container {
   width: 50%;
+  flex-grow: 1;
 }
 
-.hero .greetings {
-  font-size: 14px;
+.hero .hero-info .greetings {
   color: var(--secondary-color);
+  font-size: 14px;
 }
 
-.hero .name {
-  font-size: 50px;
+.hero .hero-info .name {
   color: #fff;
+  font-size: 50px;
   margin-bottom: 5px;
 }
 
-.hero .description {
-  font-size: 16px;
+.hero .hero-info .description {
   color: var(--light-color);
+  font-size: 16px;
   margin-bottom: 24px;
 }
 
-.hero .btn-light {
+.hero .hero-info .btn-contact {
   margin-right: 15px;
 }
 
-.hero .image {
+.hero .hero-img-container {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
 }
-.hero .image img {
+
+.hero .hero-img-container.img {
   width: 80%;
 }
 
