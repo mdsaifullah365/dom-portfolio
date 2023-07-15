@@ -316,13 +316,13 @@ body {
   position: relative;
 }
 
-.projects .project-thumbnail .mockup {
+.projects .project-thumbnail .project-mockup {
   width: 100%;
   position: relative;
   z-index: 2;
 }
 
-.projects .project-thumbnail .img {
+.projects .project-thumbnail .project-img {
   position: absolute;
   top: 3%;
   left: 12.6316%;
