@@ -1,5 +1,6 @@
 import about from './about.js';
 import contact from './contact.js';
+import footer from './footer.js';
 import hero from './hero.js';
 import projects from './projects.js';
 import sidebar from './sidebar.js';
@@ -18,6 +19,7 @@ main.append(hero);
 main.append(about);
 main.append(techStack);
 main.append(projects);
+main.append(footer);
 
 // Event Listeners
 document.querySelectorAll('.btn-contact').forEach((button) => {

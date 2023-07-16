@@ -501,3 +501,49 @@ body {
   height: 80px;
   margin-top: 15px;
 }
+
+.footer {
+  color: var(--light-color);
+  background-color: var(--dark-color);
+  text-align: center;
+}
+
+.footer .footer-top {
+  padding: 100px 0;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.footer .footer-top .text {
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+.footer .footer-bottom .container {
+  padding: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .footer-bottom .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.footer .footer-bottom .social-links a {
+  width: 40px;
+  aspect-ratio: 1/1;
+  padding: 5px;
+  color: #fff;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .footer-bottom .social-links a:hover {
+  color: var(--dark-color);
+  background-color: #fff;
+  border-radius: 50%;
+}
