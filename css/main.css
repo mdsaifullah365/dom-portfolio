@@ -717,3 +717,10 @@ body {
   background-color: #fff;
   border-radius: 50%;
 }
+
+@media only screen and (max-width: 768px) {
+  .header .container .left .hamburger,
+  .header .container .left .logo {
+    display: flex;
+  }
+}
