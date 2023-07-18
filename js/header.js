@@ -1,7 +1,9 @@
 import {
+  createA,
   createButton,
   createContainer,
   createDiv,
+  createImg,
   createLabel,
   createP,
   createSpan,
@@ -12,8 +14,18 @@ header.classList = 'header';
 
 const container = createContainer();
 
-const leftSide = createDiv('left');
-const rightSide = createDiv('right');
+const leftPanel = createDiv('left');
+const rightPanel = createDiv('right');
+
+const hamburger = createDiv('hamburger');
+
+for (let i = 0; i < 3; i++) {
+  const bar = createDiv('bar');
+  hamburger.append(bar);
+}
+
+const logoLink = createA('logo', '#home');
+const logo = createImg('img', './img/logo.png', 'Logo');
 
 const contactBtn = createButton('btn-contact');
 contactBtn.innerHTML = '<i class="fa-solid fa-address-book"></i>';
@@ -50,14 +62,17 @@ optionIcon.classList = 'toggle-dark-mode';
 const slider = createSpan('slider');
 const circle = createSpan('circle');
 
+logoLink.append(logo);
+leftPanel.append(hamburger, logoLink);
+
 popupTitle.append(titleText, titleIcon);
 optionIcon.append(slider, circle);
 popupOption.append(optionText, optionIcon);
 darkModePopup.append(popupTitle, popupOption);
 
-rightSide.append(contactBtn, resumeBtn, darkModeBtn);
+rightPanel.append(contactBtn, resumeBtn, darkModeBtn);
 
-container.append(leftSide, rightSide);
+container.append(leftPanel, rightPanel);
 
 header.append(container);
 

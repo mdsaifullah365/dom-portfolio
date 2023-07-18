@@ -246,10 +246,36 @@ body {
   position: relative;
 }
 
+.header .container .left,
 .header .container .right {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
   gap: 1rem;
+}
+
+.header .container .left .hamburger {
+  width: 30px;
+  aspect-ratio: 1/1;
+  padding: 5px 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header .container .left .hamburger:hover {
+  cursor: pointer;
+}
+
+.header .container .left .hamburger .bar {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+}
+
+.header .container .left .hamburger,
+.header .container .left .logo {
+  display: none;
 }
 
 .header .container .right > button {
