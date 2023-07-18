@@ -44,6 +44,13 @@ const createP = (className = '') => {
   return p;
 };
 
+const createSpan = (className = '') => {
+  const span = document.createElement('span');
+  span.classList = className;
+
+  return span;
+};
+
 const createImg = (className = '', src = '', alt = '') => {
   const img = document.createElement('img');
   img.classList = className;
@@ -87,7 +94,7 @@ const createInput = (
   return input;
 };
 
-const createLabel = (forValue = '', message) => {
+const createLabel = (forValue = '', message = '') => {
   const label = document.createElement('label');
   label.setAttribute('for', forValue);
   label.innerText = message;
@@ -102,6 +109,7 @@ export {
   createSection,
   createImg,
   createP,
+  createSpan,
   createButton,
   createA,
   createInput,

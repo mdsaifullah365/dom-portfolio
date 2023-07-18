@@ -1,6 +1,7 @@
 import about from './about.js';
 import contact from './contact.js';
 import footer from './footer.js';
+import header from './header.js';
 import hero from './hero.js';
 import projects from './projects.js';
 import sidebar from './sidebar.js';
@@ -15,6 +16,7 @@ main.setAttribute('id', 'home');
 body.append(sidebar);
 body.append(main);
 
+main.append(header);
 main.append(hero);
 main.append(about);
 main.append(techStack);
