@@ -1,7 +1,9 @@
 import {
+  createA,
   createButton,
   createContainer,
   createDiv,
+  createImg,
   createLabel,
   createP,
   createSpan,
@@ -11,6 +13,19 @@ const header = document.createElement('header');
 header.classList = 'header';
 
 const container = createContainer();
+
+const leftPanel = createDiv('left');
+const rightPanel = createDiv('right');
+
+const hamburger = createDiv('hamburger');
+
+for (let i = 0; i < 3; i++) {
+  const bar = createDiv('bar');
+  hamburger.append(bar);
+}
+
+const logoLink = createA('logo', '#home');
+const logo = createImg('img', './img/logo.png', 'Logo');
 
 const contactBtn = createButton('btn-contact');
 contactBtn.innerHTML = '<i class="fa-solid fa-address-book"></i>';
@@ -47,12 +62,17 @@ optionIcon.classList = 'toggle-dark-mode';
 const slider = createSpan('slider');
 const circle = createSpan('circle');
 
+logoLink.append(logo);
+leftPanel.append(hamburger, logoLink);
+
 popupTitle.append(titleText, titleIcon);
 optionIcon.append(slider, circle);
 popupOption.append(optionText, optionIcon);
 darkModePopup.append(popupTitle, popupOption);
 
-container.append(contactBtn, resumeBtn, darkModeBtn);
+rightPanel.append(contactBtn, resumeBtn, darkModeBtn);
+
+container.append(leftPanel, rightPanel);
 
 header.append(container);
 
@@ -105,9 +125,8 @@ function toggleDarkModePopup(event) {
 function toggleDarkMode() {
   const darkMode = JSON.parse(localStorage.getItem('darkMode'));
 
-  darkMode === null && localStorage.setItem('darkMode', false);
-  darkMode === true && localStorage.setItem('darkMode', false);
-  darkMode === false && localStorage.setItem('darkMode', true);
+  darkMode && localStorage.setItem('darkMode', false);
+  darkMode || localStorage.setItem('darkMode', true);
 
   refreshDarkModeBtn();
 }
@@ -116,9 +135,8 @@ function toggleDarkMode() {
 function refreshDarkModeBtn() {
   const darkMode = JSON.parse(localStorage.getItem('darkMode'));
 
-  darkMode === null && optionIcon.classList.add('on');
-  darkMode === true && optionIcon.classList.add('on');
-  darkMode === false && optionIcon.classList.remove('on');
+  darkMode && optionIcon.classList.add('on');
+  darkMode || optionIcon.classList.remove('on');
 }
 
 // stopPropagation
