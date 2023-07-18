@@ -110,9 +110,8 @@ function toggleDarkModePopup(event) {
 function toggleDarkMode() {
   const darkMode = JSON.parse(localStorage.getItem('darkMode'));
 
-  darkMode === null && localStorage.setItem('darkMode', false);
-  darkMode === true && localStorage.setItem('darkMode', false);
-  darkMode === false && localStorage.setItem('darkMode', true);
+  darkMode && localStorage.setItem('darkMode', false);
+  darkMode || localStorage.setItem('darkMode', true);
 
   refreshDarkModeBtn();
 }
@@ -121,9 +120,8 @@ function toggleDarkMode() {
 function refreshDarkModeBtn() {
   const darkMode = JSON.parse(localStorage.getItem('darkMode'));
 
-  darkMode === null && optionIcon.classList.add('on');
-  darkMode === true && optionIcon.classList.add('on');
-  darkMode === false && optionIcon.classList.remove('on');
+  darkMode && optionIcon.classList.add('on');
+  darkMode || optionIcon.classList.remove('on');
 }
 
 // stopPropagation
