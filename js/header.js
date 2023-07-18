@@ -12,6 +12,9 @@ header.classList = 'header';
 
 const container = createContainer();
 
+const leftSide = createDiv('left');
+const rightSide = createDiv('right');
+
 const contactBtn = createButton('btn-contact');
 contactBtn.innerHTML = '<i class="fa-solid fa-address-book"></i>';
 
@@ -52,7 +55,9 @@ optionIcon.append(slider, circle);
 popupOption.append(optionText, optionIcon);
 darkModePopup.append(popupTitle, popupOption);
 
-container.append(contactBtn, resumeBtn, darkModeBtn);
+rightSide.append(contactBtn, resumeBtn, darkModeBtn);
+
+container.append(leftSide, rightSide);
 
 header.append(container);
 

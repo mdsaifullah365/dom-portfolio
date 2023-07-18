@@ -242,12 +242,17 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 1rem;
+  justify-content: space-between;
   position: relative;
 }
 
-.header .container > button {
+.header .container .right {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.header .container .right > button {
   width: 40px;
   aspect-ratio: 1/1;
   padding: 5px;
@@ -260,7 +265,7 @@ body {
   border: none;
 }
 
-.header .container > button:hover {
+.header .container .right > button:hover {
   background-color: var(--light-color);
   cursor: pointer;
 }
