@@ -740,7 +740,98 @@ body {
   border-radius: 50%;
 }
 
+/* max-width: 768px  */
 @media only screen and (max-width: 768px) {
+  :root {
+    --sidebar-width: 300px;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar .name {
+    display: block;
+  }
+
+  .sidebar .navmenu {
+    width: 100%;
+  }
+
+  .sidebar .navmenu li {
+    padding: 0;
+    border-top: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+  }
+
+  .sidebar .navmenu li:last-child {
+    border-bottom: 1px solid var(--primary-color);
+  }
+
+  .sidebar .navmenu li:hover {
+    background-color: var(--primary-color);
+  }
+
+  .sidebar .navmenu li a {
+    position: static;
+    padding: 15px 15px 15px 30px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .sidebar .navmenu li i {
+    position: static;
+    transform: translate(0, 0);
+  }
+
+  .sidebar .navmenu li:hover i {
+    transform: translate(0, 0);
+  }
+
+  .sidebar .navmenu li span {
+    position: static;
+    transform: translate(0, 0);
+    padding: 0;
+  }
+
+  .sidebar .navmenu li:hover span {
+    color: #fff;
+    transform: translate(0, 0);
+  }
+
+  .sidebar .sidebar-footer {
+    aspect-ratio: unset;
+    display: block;
+  }
+
+  .sidebar .resume {
+    padding: 15px 15px 15px 30px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .sidebar .resume:hover {
+    color: #fff;
+    background-color: var(--primary-color);
+  }
+
+  .sidebar .resume .tooltip {
+    display: block;
+    opacity: 1;
+    width: unset;
+    background-color: unset;
+    text-align: left;
+    padding: 0;
+    position: static;
+    transform: translate(0, 0);
+  }
+
+  .content {
+    margin-left: 0;
+  }
+
   .header .container .left .hamburger,
   .header .container .left .logo {
     display: flex;
