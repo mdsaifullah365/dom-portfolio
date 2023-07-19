@@ -91,6 +91,9 @@ hamburger.addEventListener('click', showSidebar);
 sidebar.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', hideSidebar);
 });
+window.addEventListener('resize', function () {
+  innerWidth > 768 ? showSidebar() : hideSidebar();
+});
 
 // Event Handlers
 // toggleHeader
@@ -155,9 +158,9 @@ function stopPropagation(event) {
 
 // showSidebar
 function showSidebar(event) {
-  event.stopPropagation();
   const sidebar = document.querySelector('.sidebar');
   sidebar.style.transform = 'translateX(0)';
+  event.stopPropagation();
 }
 
 // hideSidebar
