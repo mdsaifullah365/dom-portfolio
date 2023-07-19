@@ -1,3 +1,4 @@
+import sidebar from './sidebar.js';
 import {
   createA,
   createButton,
@@ -78,10 +79,21 @@ header.append(container);
 
 // Event listeners
 window.addEventListener('scroll', toggleHeader());
-document.body.addEventListener('click', hideDarkModePopup);
+document.body.addEventListener('click', function () {
+  hideDarkModePopup();
+  hideSidebar();
+});
 darkModeBtn.addEventListener('click', toggleDarkModePopup);
 darkModePopup.addEventListener('click', stopPropagation);
 popupOption.addEventListener('click', toggleDarkMode);
+sidebar.addEventListener('click', stopPropagation);
+hamburger.addEventListener('click', showSidebar);
+sidebar.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', hideSidebar);
+});
+window.addEventListener('resize', function () {
+  innerWidth > 768 ? showSidebar() : hideSidebar();
+});
 
 // Event Handlers
 // toggleHeader
@@ -142,6 +154,21 @@ function refreshDarkModeBtn() {
 // stopPropagation
 function stopPropagation(event) {
   event.stopPropagation();
+}
+
+// showSidebar
+function showSidebar(event) {
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.transform = 'translateX(0)';
+  event.stopPropagation();
+}
+
+// hideSidebar
+function hideSidebar() {
+  if (innerWidth <= 768) {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.transform = 'translateX(-100%)';
+  }
 }
 
 export default header;
