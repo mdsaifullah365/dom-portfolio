@@ -162,8 +162,10 @@ function showSidebar(event) {
 
 // hideSidebar
 function hideSidebar() {
-  const sidebar = document.querySelector('.sidebar');
-  sidebar.style.transform = 'translateX(-100%)';
+  if (innerWidth <= 768) {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.transform = 'translateX(-100%)';
+  }
 }
 
 export default header;
