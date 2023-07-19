@@ -1,3 +1,4 @@
+import sidebar from './sidebar.js';
 import {
   createA,
   createButton,
@@ -78,10 +79,18 @@ header.append(container);
 
 // Event listeners
 window.addEventListener('scroll', toggleHeader());
-document.body.addEventListener('click', hideDarkModePopup);
+document.body.addEventListener('click', function () {
+  hideDarkModePopup();
+  hideSidebar();
+});
 darkModeBtn.addEventListener('click', toggleDarkModePopup);
 darkModePopup.addEventListener('click', stopPropagation);
 popupOption.addEventListener('click', toggleDarkMode);
+sidebar.addEventListener('click', stopPropagation);
+hamburger.addEventListener('click', showSidebar);
+sidebar.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', hideSidebar);
+});
 
 // Event Handlers
 // toggleHeader
@@ -142,6 +151,19 @@ function refreshDarkModeBtn() {
 // stopPropagation
 function stopPropagation(event) {
   event.stopPropagation();
+}
+
+// showSidebar
+function showSidebar(event) {
+  event.stopPropagation();
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.transform = 'translateX(0)';
+}
+
+// hideSidebar
+function hideSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.transform = 'translateX(-100%)';
 }
 
 export default header;
