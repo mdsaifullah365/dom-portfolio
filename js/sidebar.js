@@ -1,4 +1,4 @@
-import { createA, createImg } from './utilities.js';
+import { createA, createDiv, createImg, createP } from './utilities.js';
 
 const navItems = [
   { link: '#home', text: 'Home', icon: 'fa-sharp fa-solid fa-house' },
@@ -10,9 +10,14 @@ const navItems = [
 const sidebar = document.createElement('aside');
 sidebar.classList.add('sidebar');
 
+const header = createDiv('sidebar-header');
+
 const logoLink = createA('logo', '#home');
 
 const logo = createImg('img', './img/logo.png', 'Logo');
+
+const name = createP('name');
+name.innerText = 'Md Saif Ullah';
 
 const navmenu = document.createElement('nav');
 navmenu.classList.add('navmenu');
@@ -35,6 +40,8 @@ navItems.forEach(({ link, text, icon }) => {
   ul.append(li);
 });
 
+const footer = createDiv('sidebar-footer');
+
 const resumeLink = createA('resume', '#');
 
 const resumeIcon = document.createElement('i');
@@ -45,8 +52,10 @@ tooltip.classList = 'tooltip';
 tooltip.innerText = 'Download resume';
 
 logoLink.append(logo);
+header.append(logoLink, name);
 navmenu.append(ul);
 resumeLink.append(resumeIcon, tooltip);
-sidebar.append(logoLink, navmenu, resumeLink);
+footer.append(resumeLink);
+sidebar.append(header, navmenu, footer);
 
 export default sidebar;
