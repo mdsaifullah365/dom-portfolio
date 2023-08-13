@@ -22,7 +22,7 @@ name.innerText = 'I am Saif';
 
 const description = createP('description');
 description.innerText =
-  'I am a frontend web developer. I can provide clean code and pixel perfect design to make interactive with web animations.';
+  'I am a frontend web developer. I can transform innovative ideas into interactive and responsive web applications.';
 
 const contactBtn = createButton('btn btn-light btn-contact');
 contactBtn.innerText = 'Contact me';
