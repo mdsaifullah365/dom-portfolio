@@ -6,6 +6,7 @@
   --dark-color: #252734;
   --medium-color: #282a37;
   --light-color: #858792;
+  --neutral-color: #d9d9d9;
 
   /* Width */
   --sidebar-width: 80px;
@@ -31,7 +32,7 @@ a {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: var(--primary-color);
+  /* background-color: var(--primary-color); */
 }
 
 .container {
@@ -53,7 +54,7 @@ body {
 }
 
 .section-header .title {
-  color: #fff;
+  color: var(--dark-color);
   font-size: 35px;
   font-weight: lighter;
 }
@@ -100,7 +101,7 @@ body {
 }
 
 .highlight {
-  color: #fff;
+  color: var(--secondary-color);
 }
 
 /* Sidebar */
@@ -247,8 +248,8 @@ body {
 /* Header */
 .header {
   height: var(--header-height);
-  background-color: var(--dark-color);
-  opacity: 0.9;
+  background-color: #fff;
+  opacity: 0.95;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
@@ -292,7 +293,7 @@ body {
 .header .container .left .hamburger .bar {
   width: 100%;
   height: 3px;
-  background-color: #fff;
+  background-color: var(--dark-color);
 }
 
 .header .container .left .hamburger,
@@ -303,18 +304,20 @@ body {
 .header .container .right > button {
   width: 40px;
   aspect-ratio: 1/1;
-  padding: 5px;
+  /* padding: 5px; */
   border-radius: 50%;
-  color: #fff;
-  background-color: #45485b;
+  color: #000;
+  background-color: var(--neutral-color);
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
+  font-size: 15px;
 }
 
 .header .container .right > button:hover {
-  background-color: var(--light-color);
+  background-color: var(--dark-color);
+  color: #fff;
   cursor: pointer;
 }
 
@@ -327,11 +330,12 @@ body {
   right: 0;
   bottom: 0;
   width: 15px;
-  aspect-ratio: 1/1;
-  font-size: 10px;
+  height: 15px;
+  /* aspect-ratio: 1/1; */
+  font-size: 8px;
   color: #fff;
-  background-color: var(--medium-color);
-  padding: 5px;
+  background-color: var(--dark-color);
+  /* padding: 5px; */
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -343,16 +347,16 @@ body {
   top: 120%;
   right: 50px;
   width: 300px;
-  color: #fff;
+  color: var(--dark-color);
   display: grid;
   box-shadow: 0px 0px 10px 1px #999;
   border-radius: 8px;
-  background-color: var(--dark-color);
+  background-color: #fff;
 }
 
 .header .dark-mode-popup .popup-title,
 .header .dark-mode-popup .popup-option {
-  border-bottom: 2px solid var(--light-color);
+  border-bottom: 2px solid var(--neutral-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -369,7 +373,7 @@ body {
 }
 
 .header .dark-mode-popup .popup-option:hover {
-  background-color: var(--primary-color);
+  background-color: var(--neutral-color);
   cursor: pointer;
 }
 
@@ -414,7 +418,7 @@ body {
 
 /* Hero */
 .hero {
-  background-color: var(--dark-color);
+  background-color: var(--neutral-color);
   padding: 0;
 }
 
@@ -436,13 +440,13 @@ body {
 }
 
 .hero .hero-info .name {
-  color: #fff;
+  color: #000;
   font-size: 50px;
   margin-bottom: 5px;
 }
 
 .hero .hero-info .description {
-  color: var(--light-color);
+  color: var(--dark-color);
   font-size: 16px;
   margin-bottom: 24px;
 }
@@ -474,7 +478,7 @@ body {
 
 /* Tech */
 .tech {
-  background-color: var(--medium-color);
+  /* background-color: var(--neutral-color); */
 }
 
 .tech .tech-container {
@@ -498,7 +502,7 @@ body {
 }
 
 .tech .tech-container .tech-items .item {
-  background-color: var(--primary-color);
+  background-color: var(--dark-color);
   padding: 5px 8px;
   border-radius: 5px;
   display: flex;
@@ -523,7 +527,7 @@ body {
 }
 
 .projects .project {
-  background-color: var(--medium-color);
+  background-color: var(--neutral-color);
   padding: 40px;
   display: grid;
   align-items: center;
@@ -532,7 +536,7 @@ body {
 
 .projects .project:hover {
   cursor: pointer;
-  background-color: var(--dark-color);
+  background-color: var(--light-color);
 }
 
 .projects .project-thumbnail {
@@ -554,11 +558,11 @@ body {
 }
 
 .projects .project-info {
-  color: var(--light-color);
+  color: var(--dark-color);
 }
 
 .projects .project-title {
-  color: #fff;
+  color: #000;
   font-size: 18px;
   font-weight: normal;
 }
@@ -584,7 +588,7 @@ body {
 }
 
 .projects .link-container .link {
-  color: #fff;
+  color: #000;
   font-size: 10px;
   display: flex;
   gap: 8px;
@@ -695,12 +699,12 @@ body {
 }
 
 .footer {
-  color: var(--light-color);
-  background-color: var(--dark-color);
   text-align: center;
 }
 
 .footer .footer-top {
+  color: #000;
+  background-color: var(--secondary-color);
   padding: 100px 0;
   border-bottom: 2px solid var(--primary-color);
 }
@@ -708,6 +712,11 @@ body {
 .footer .footer-top .text {
   font-size: 35px;
   margin-bottom: 30px;
+}
+
+.footer .footer-bottom {
+  color: var(--light-color);
+  background-color: #000;
 }
 
 .footer .footer-bottom .container {
