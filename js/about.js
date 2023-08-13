@@ -6,8 +6,15 @@ import {
 } from './utilities.js';
 
 const aboutMe = `
-<p>In the vast digital landscape, where codes converge and pixels dance, I embark on a journey as an aspiring <<web developer>>. With a curious mind and a passion for crafting immersive online experiences, I wield the power of technology to shape the virtual realms. Armed with lines of <<HTML, CSS, and JavaScript>>, I breathe life into ideas, turning visions into tangible realities. Like an artist with a brush, I <<paint my imagination>> onto the canvas of the web, weaving together elegant designs and seamless functionalities. Each line of code is a stroke of creativity, and every project is an opportunity to push boundaries and bring dreams to life.</p><br/>
-<p>Behind the screen, my heart beats with the <<rhythm of innovation>>, driven by an insatiable thirst for knowledge. I am constantly exploring the ever-evolving web development landscape, embracing new frameworks and technologies with open arms. Yet, I believe that true mastery lies not only in technical prowess but in empathy for the <<end-users>>. I strive to create intuitive and user-centric designs, ensuring that every website I build becomes a harmonious convergence of aesthetics and <<usability>>. It is my unwavering dedication to excellence that fuels my pursuit of perfection, as I diligently work towards shaping the digital world, one line of code at a time.</p>
+<p>I'm a passionate and dedicated <<Front-End Web Developer>> from Chattogram, Bangladesh. With a keen eye for <<detail and a creative spirit>>, I thrive on creating <<clean, exciting web experiences>> that leave a lasting impact.</p><br/>
+
+<p>As a developer, my expertise lies in JavaScript, React, Tailwind, HTML, and CSS, allowing me to transform innovative ideas into <<interactive and responsive>> web applications. I am also comfortable working with Node.js, Express.js, and MongoDB, which empowers me to create <<dynamic and efficient>> back-end solutions.</p><br/>
+
+<p>Beyond my coding adventures, I'm on an <<unending quest>> to explore the philosophy of life and unravel its true essence. In my search for wisdom, I dive deep into various schools of thought, from ancient teachings to contemporary philosophy. This pursuit enriches my <<perspective as a developer>> and fuels my personal growth.</p><br/>
+
+<p>I enjoy watching movies or <<engaging in delightful conversations>> with friends when I am not immersed in code or pondering life's mysteries. As a result of these passions, I can balance my professional and personal lives and stay <<balanced and creative>>.</p><br/>
+
+<p>Connecting with professionals who share my passion for <<tech innovation>> and web development is always a pleasure. Please reach out if you want to discuss new frameworks, share design insights, or <<explore potential collaborations>>. Together, let's <<build the future>> of the web.</p>
 `;
 
 const about = createSection('about');
