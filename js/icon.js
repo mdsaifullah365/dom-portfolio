@@ -35,4 +35,5 @@ export {
   tailwindcss,
   typescript,
   vscode,
+  reactnative,
 };

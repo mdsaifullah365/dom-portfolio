@@ -1,10 +1,3 @@
-import {
-  createSectionTitle,
-  createContainer,
-  createDiv,
-  createSection,
-} from './utilities.js';
-
 const aboutMe = `
 <p>I'm a passionate and dedicated <<Front-End Web Developer>> from Chattogram, Bangladesh. With a keen eye for <<detail and a creative spirit>>, I thrive on creating <<clean, exciting web experiences>> that leave a lasting impact.</p><br/>
 
@@ -17,18 +10,4 @@ const aboutMe = `
 <p>Connecting with professionals who share my passion for <<tech innovation>> and web development is always a pleasure. Please reach out if you want to discuss new frameworks, share design insights, or <<explore potential collaborations>>. Together, let's <<build the future>> of the web.</p>
 `;
 
-const about = createSection('about');
-
-const container = createContainer();
-
-const title = createSectionTitle('About Me');
-
-const description = createDiv('description');
-description.innerHTML = aboutMe
-  .replaceAll('<<', '<span class="highlight">')
-  .replaceAll('>>', '</span>');
-
-container.append(title, description);
-about.append(container);
-
-export default about;
+export default aboutMe;

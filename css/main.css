@@ -348,10 +348,10 @@ body {
   right: 50px;
   width: 300px;
   color: var(--dark-color);
-  display: grid;
   box-shadow: 0px 0px 10px 1px #999;
   border-radius: 8px;
   background-color: #fff;
+  display: none;
 }
 
 .header .dark-mode-popup .popup-title,
@@ -604,7 +604,7 @@ body {
 }
 
 /* Contact */
-.contact {
+.contact-popup {
   max-height: 600px;
   max-width: 900px;
   margin: auto auto;
@@ -617,11 +617,11 @@ body {
   background-color: var(--dark-color);
   opacity: 0.98;
   box-shadow: 2px 3px 5px #999;
-  display: grid;
+  display: none;
   grid-template-columns: 1fr 1fr;
 }
 
-.contact .btn-cancel {
+.contact-popup .btn-cancel {
   position: absolute;
   top: 30px;
   right: 20px;
@@ -632,57 +632,57 @@ body {
   padding: 30px;
 }
 
-.contact .btn-cancel:hover {
+.contact-popup .btn-cancel:hover {
   cursor: pointer;
   color: var(--secondary-color);
 }
 
-.contact .contact-info {
+.contact-popup .contact-info {
   padding: 60px;
   background-color: var(--secondary-color);
   display: flex;
   align-items: center;
 }
 
-.contact .contact-info .contact-details {
+.contact-popup .contact-info .contact-details {
   display: grid;
   gap: 1.5rem;
 }
 
-.contact .contact-info .contact-details a {
+.contact-popup .contact-info .contact-details a {
   color: var(--dark-color);
 }
 
-.contact .contact-info .contact-details a:hover span {
+.contact-popup .contact-info .contact-details a:hover span {
   text-decoration: underline;
 }
 
-.contact .contact-info .contact-details a i {
+.contact-popup .contact-info .contact-details a i {
   margin-right: 1rem;
 }
 
-.contact .contact-message {
+.contact-popup .contact-message {
   padding: 60px;
 }
 
-.contact .contact-message .heading {
+.contact-popup .contact-message .heading {
   color: #fff;
   font-size: 40px;
   font-weight: lighter;
   margin-bottom: 20px;
 }
 
-.contact .contact-message .contact-form {
+.contact-popup .contact-message .contact-form {
   width: 100%;
 }
 
-.contact .contact-message .contact-form label {
+.contact-popup .contact-message .contact-form label {
   color: var(--light-color);
 }
 
-.contact .contact-message .contact-form #name,
-.contact .contact-message .contact-form #email,
-.contact .contact-message .contact-form #message {
+.contact-popup .contact-message .contact-form #name,
+.contact-popup .contact-message .contact-form #email,
+.contact-popup .contact-message .contact-form #message {
   width: 100%;
   height: 40px;
   color: var(--light-color);
@@ -693,7 +693,7 @@ body {
   margin-bottom: 40px;
 }
 
-.contact .contact-message .contact-form #message {
+.contact-popup .contact-message .contact-form #message {
   height: 80px;
   margin-top: 15px;
 }

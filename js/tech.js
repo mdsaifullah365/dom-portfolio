@@ -1,17 +1,9 @@
 import {
-  createSectionTitle,
-  createContainer,
-  createDiv,
-  createImg,
-  createP,
-  createSection,
-} from './utilities.js';
-import {
   html,
   css,
   javascript,
   react,
-  nextjs,
+  // nextjs,
   bootstrap,
   expressjs,
   git,
@@ -19,7 +11,7 @@ import {
   mongodb,
   mongoose,
   nodejs,
-  redux,
+  // redux,
   sass,
   tailwindcss,
   typescript,
@@ -66,35 +58,4 @@ const techs = [
   },
 ];
 
-const tech = createSection('tech');
-
-const title = createSectionTitle('Tech Stack');
-
-const container = createContainer();
-
-const techContainer = createDiv('tech-container');
-
-techs.forEach(({ expertiseLevel: level, items }) => {
-  const expertiseLevel = createP('expertise-level');
-  expertiseLevel.innerText = level;
-
-  const techItems = createDiv('tech-items');
-
-  items.forEach(({ name, icon }) => {
-    const item = createDiv('item');
-
-    const logoIcon = createImg('tech-logo', icon, name);
-
-    const techName = createP('tech-name');
-    techName.innerText = name;
-
-    item.append(logoIcon, techName);
-    techItems.append(item);
-    techContainer.append(expertiseLevel, techItems);
-  });
-});
-
-container.append(title, techContainer);
-tech.append(container);
-
-export default tech;
+export default techs;

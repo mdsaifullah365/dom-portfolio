@@ -24,6 +24,205 @@
     <title>Md Saif Ullah</title>
   </head>
   <body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <!-- Sidebar Header -->
+      <div class="sidebar-header">
+        <a href="#home" class="logo">
+          <img src="./img/logo.png" alt="Logo" class="img" />
+        </a>
+        <p class="name">Md Saif Ullah</p>
+      </div>
+
+      <!-- Navmenu -->
+      <nav class="navmenu">
+        <ul></ul>
+      </nav>
+
+      <!-- Sidebar Footer -->
+      <div class="sidebar-footer">
+        <a href="#" class="resume">
+          <i class="fa-solid fa-file-arrow-down"></i>
+          <span class="tooltip">Download resume</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="content" id="home">
+      <!-- Header -->
+      <header class="header">
+        <div class="container">
+          <div class="left">
+            <div class="hamburger">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+
+            <a href="#home" class="logo">
+              <img src="./img/logo.png" alt="Logo" class="img" />
+            </a>
+          </div>
+
+          <div class="right">
+            <button class="btn-contact">
+              <i class="fa-solid fa-address-book"></i>
+            </button>
+
+            <button class="btn-resume">
+              <i class="fa-solid fa-file-arrow-down"></i>
+            </button>
+
+            <button class="btn-dark-mode">
+              <i class="fa-solid fa-circle-half-stroke"></i>
+
+              <p class="dropdown">
+                <i class="fa-solid fa-chevron-down"></i>
+              </p>
+            </button>
+          </div>
+
+          <div class="dark-mode-popup">
+            <p class="popup-title">
+              <span>Switch Appearance</span>
+
+              <label for="">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+              </label>
+            </p>
+
+            <div class="popup-option">
+              <span>Dark Mode</span>
+
+              <label for="" class="toggle-dark-mode">
+                <span class="slider"></span>
+                <span class="circle"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero -->
+      <section class="hero section">
+        <div class="container">
+          <!-- Hero Info -->
+          <div class="hero-info">
+            <p class="greetings">Hi, there!</p>
+
+            <h1 class="name">I am Saif</h1>
+
+            <p class="description">
+              I am a frontend web developer. I can transform innovative ideas
+              into interactive and responsive web applications.
+            </p>
+
+            <button class="btn btn-light btn-contact">Contact me</button>
+
+            <button class="btn btn-solid btn-resume">Download resume</button>
+          </div>
+
+          <!-- Hero Image -->
+          <div class="hero-img-container">
+            <img
+              src="./img/my-photo.png"
+              alt="Photo of Md Saif Ullah"
+              class="img"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="about section">
+        <div class="container">
+          <header class="section-header">
+            <h2 class="title">About Me</h2>
+
+            <div class="line"></div>
+          </header>
+
+          <div class="description"></div>
+        </div>
+      </section>
+
+      <!-- Tech -->
+      <section class="tech section">
+        <div class="container">
+          <header class="section-header">
+            <h2 class="title">Tech Stack</h2>
+
+            <div class="line"></div>
+          </header>
+
+          <div class="tech-container"></div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="projects section">
+        <div class="container">
+          <header class="section-header">
+            <h2 class="title">Featured Projects</h2>
+
+            <div class="line"></div>
+          </header>
+
+          <div class="project-container"></div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-top">
+          <p class="text">Reach out and say hi!</p>
+          <button class="btn btn-solid btn-contact">Drop a message</button>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="container">
+            <p class="copyright"></p>
+            <div class="social-links"></div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Contact Popup -->
+    <div class="contact-popup">
+      <button class="btn-cancel">
+        <i class="fa-solid fa-xmark fa-2xl"></i>
+      </button>
+
+      <div class="contact-info">
+        <div class="contact-details"></div>
+      </div>
+
+      <div class="contact-message">
+        <h3 class="heading">Let's talk</h3>
+
+        <form class="contact-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required> </textarea>
+
+          <input
+            type="submit"
+            id="submit"
+            name="submit"
+            value="Send message"
+            class="btn btn-solid"
+          />
+        </form>
+      </div>
+    </div>
+
     <!-- Script -->
     <script type="module" src="./js/index.js"></script>
   </body>
