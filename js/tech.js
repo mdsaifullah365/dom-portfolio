@@ -30,21 +30,20 @@ const techs = [
   {
     expertiseLevel: 'Expert',
     items: [
+      { name: 'JavaScript', icon: javascript },
+      { name: 'React', icon: react },
+      { name: 'Tailwind CSS', icon: tailwindcss },
       { name: 'HTML', icon: html },
       { name: 'CSS', icon: css },
-      { name: 'JavaScript', icon: javascript },
-      { name: 'React JS', icon: react },
-      { name: 'Next JS', icon: nextjs },
-      { name: 'TailwindCSS', icon: tailwindcss },
+      // { name: 'Next JS', icon: nextjs },
     ],
   },
   {
     expertiseLevel: 'Comfortable',
     items: [
-      { name: 'Node JS', icon: nodejs },
-      { name: 'Express JS', icon: expressjs },
+      { name: 'Node.js', icon: nodejs },
+      { name: 'Express', icon: expressjs },
       { name: 'MongoDB', icon: mongodb },
-      { name: 'Bootstrap', icon: bootstrap },
       { name: 'SASS', icon: sass },
     ],
   },
@@ -52,8 +51,9 @@ const techs = [
     expertiseLevel: 'Familiar',
     items: [
       { name: 'TypeScript', icon: typescript },
-      { name: 'Redux', icon: redux },
       { name: 'Mongoose', icon: mongoose },
+      { name: 'Bootstrap', icon: bootstrap },
+      // { name: 'Redux', icon: redux },
     ],
   },
   {
