@@ -7,20 +7,20 @@ const contactLinks = [
   },
   {
     icon: 'fa-solid fa-envelope',
-    text: 'mdsaifullah365@yahoo.com',
-    link: 'mailto:mdsaifullah365@yahoo.com',
+    text: 'mdsaifullah1302@gmail.com',
+    link: 'mailto:mdsaifullah1302@gmail.com',
     target_blank: false,
   },
   {
     icon: 'fa-brands fa-linkedin',
-    text: 'mdsaifullah365',
-    link: 'https://www.linkedin.com/in/mdsaifullah365/',
+    text: 'saifscripter',
+    link: 'https://www.linkedin.com/in/saifscripter/',
     target_blank: true,
   },
   {
     icon: 'fa-brands fa-github',
-    text: 'mdsaifullah365',
-    link: 'https://github.com/mdsaifullah365',
+    text: 'saifscripter',
+    link: 'https://github.com/saifscripter',
     target_blank: true,
   },
 ];
